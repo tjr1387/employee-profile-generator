@@ -27,6 +27,23 @@ describe('Engineer', () => {
         });
     });
 
+    describe('Inherited methods', () => {
+        it('Should successfully access and use the three methods inherited from superclass - getName, getId, getEmail', () => {
+            const testObj = {
+                name : 'Machias',
+                id : '22',
+                email : 'machias@ost.net',
+                gitHub : 'betterthanjusis'
+            };
+
+            const obj = new Engineer('Machias', '22', 'machias@ost.net', 'betterthanjusis');
+
+            expect(obj.getName()).toEqual(testObj.name);
+            expect(obj.getId()).toEqual(testObj.id);
+            expect(obj.getEmail()).toEqual(testObj.email);
+        });
+    });
+
     describe('getRole', () => {
         it('Should return the role of the object (Engineer)', () => {
             const obj = new Engineer('Tita', '51', 'tita@zcf.net', 'heartagate');

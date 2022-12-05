@@ -27,6 +27,23 @@ describe('Manager', () => {
         });
     });
 
+    describe('Inherited methods', () => {
+        it('Should successfully access and use the three methods inherited from superclass - getName, getId, getEmail', () => {
+            const testObj = {
+                name : 'Jusis',
+                id : '11',
+                email : 'jusis@bareahard.net',
+                officeNum : '1'
+            };
+
+            const obj = new Manager('Jusis', '11', 'jusis@bareahard.net', '1');
+
+            expect(obj.getName()).toEqual(testObj.name);
+            expect(obj.getId()).toEqual(testObj.id);
+            expect(obj.getEmail()).toEqual(testObj.email);
+        });
+    });
+
     describe('getRole', () => {
         it('Should return the role of the object (Manager)', () => {
             const obj = new Manager('Joshua', '13', 'joshua@liberl.net', '9');

@@ -27,6 +27,23 @@ describe('Intern', () => {
         });
     });
 
+    describe('Inherited methods', () => {
+        it('Should successfully access and use the three methods inherited from superclass - getName, getId, getEmail', () => {
+            const testObj = {
+                name : 'Musse',
+                id : '17',
+                email : 'musse@ordis.net',
+                school : 'Thors Branch Campus'
+            };
+
+            const obj = new Intern('Musse', '17', 'musse@ordis.net', 'Thors Branch Campus');
+
+            expect(obj.getName()).toEqual(testObj.name);
+            expect(obj.getId()).toEqual(testObj.id);
+            expect(obj.getEmail()).toEqual(testObj.email);
+        });
+    });
+
     describe('getRole', () => {
         it('Should return the role of the object (Intern)', () => {
             const obj = new Intern('Altina', '0', 'altina@homunculus.net', 'Black Workshop');
