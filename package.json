@@ -23,6 +23,7 @@
   "homepage": "https://github.com/tjr1387/employee-profile-generator#readme",
   "dependencies": {
     "inquirer": "^8.2.4",
+    "inquirer-loop": "^0.3.0",
     "jest": "^29.3.1"
   }
 }
