@@ -10,8 +10,8 @@ Using NodeJS and its 'Inquirer' package (plus the 'inquirer-loop' supplement), t
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [How to Contribute](#how-to-contribute)
 - [Tests](#tests)
+- [Comments/Flaws](#comments/flaws)
 - [License](#license)
 
 ## Installation
@@ -22,17 +22,15 @@ Need both NodeJS (preferably with Git Bash if using Windows) and its 'Inquirer' 
 
 You will want to pull this repo down so you can run the file in your command line. Once in the project directory in your terminal, run 'node index.js' to begin the questions. You will be asked to give the name, id, email and office number of a manager. Then you will have the option to add more employees (enter 'Y' to add) -- you can choose between interns and engineers, and may add as many as you want. Each additional employee will need their name, id and email given, with the engineers being asked for their GitHub username and the interns being asked for their school. Once you've chosen (entered 'n') to not add another employee, the questions will cease and an HTML page 'employees.html' featuring a card for every added employee will be generated in the 'dist/' folder. Additionally, if you have 'jest' installed and run 'npm test', you will run all the test suites created for the special classes -- they should all pass. (Note: You can change the file name and location of the generated HTML page by specifying it in the first argument of the 'writeToFile' function, in 'index.js')
 
-Link to video: 
+Link to video: https://drive.google.com/file/d/1TgKcqHIh-vhSoqFu4b9CKXN0B0kj8lLM/view
 
 Screenshot(s):
+![Finished inquirer question set & jest tests](./assets/images/terminal-test-and-sample.png?raw=true "Example of a finished inquirer set and completed test suite")
+![Sample HTML file generated](./assets/images/generated-html-example.png?raw=true "A sample HTML file generated from running the question set")
 
 ## Credits
 
-GitHub user 'andreasonny83' for a nice boilerplate '.gitignore' file, and 'inquirer-loop' package for making my life much easier!
-
-## How to Contribute
-
-N/A
+GitHub user 'andreasonny83' for a nice boilerplate '.gitignore' file, and 'inquirer-loop' package for making my life much easier! Also 'inquirer' & 'jest' packages, and Bootstrap.
 
 ## Tests
 
