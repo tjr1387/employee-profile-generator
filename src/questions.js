@@ -5,22 +5,26 @@ const questions = [
     {
         type: 'input',
         message: "Please enter the team manager's name.",
-        name: 'name'
+        name: 'name',
+        default: 'Anonymous'
     },
     {
         type: 'input',
         message: "Please enter the manager's employee ID.",
-        name: 'id'
+        name: 'id',
+        default: '[None given]'
     },
     {
         type: 'input',
         message: "Please enter the manager's email address.",
-        name: 'email'
+        name: 'email',
+        default: 'idontknow@thisisntreal.com'
     },
     {
         type: 'input',
         message: "Please enter the manager's office number.",
-        name: 'officeNum'
+        name: 'officeNum',
+        default: '[None given]'
     },
     {
         type: 'loop',
@@ -39,17 +43,20 @@ const questions = [
             {
                 type: 'input',
                 message: "Please enter the employee's name.",
-                name: 'name'
+                name: 'name',
+                default: 'Anonymous'
             },
             {
                 type: 'input',
                 message: "Please enter the employee's ID.",
-                name: 'id'
+                name: 'id',
+                default: '[None given]'
             },
             {
                 type: 'input',
                 message: "Please enter the employee's email address.",
-                name: 'email'
+                name: 'email',
+                default: 'idontknow@thisisntreal.com'
             },
             {
                 when: input => {
@@ -57,7 +64,8 @@ const questions = [
                 },
                 type: 'input',
                 message: "Please enter the employee's GitHub username.",
-                name: 'gitHub'
+                name: 'gitHub',
+                default: 'None. Get 404d!'
             },
             {
                 when: input => {
@@ -65,76 +73,12 @@ const questions = [
                 },
                 type: 'input',
                 message: "Please enter the intern's school.",
-                name: 'school'
+                name: 'school',
+                default: '[None given]'
             }
         ]
     }
 ];
 
-// const engineerQuestions = [
-//     {
-//         type: 'input',
-//         message: "Please enter the engineer's name.",
-//         name: 'name'
-//     },
-//     {
-//         type: 'input',
-//         message: "Please enter the engineer's employee ID.",
-//         name: 'id'
-//     },
-//     {
-//         type: 'input',
-//         message: "Please enter the engineer's email address.",
-//         name: 'email'
-//     },
-//     {
-//         type: 'input',
-//         message: "Please enter the engineer's GitHub username.",
-//         name: 'gitHub'
-//     },
-//     {
-//         type: 'list',
-//         message: 'Would you like to add another team member?',
-//         name: 'addEmployee',
-//         choices: [
-//           'Add Intern',
-//           'Add Engineer',
-//           'Nope. All Done.'
-//         ]
-//     }
-// ];
-
-// const internQuestions = [
-//     {
-//         type: 'input',
-//         message: "Please enter the intern's name.",
-//         name: 'name'
-//     },
-//     {
-//         type: 'input',
-//         message: "Please enter the intern's employee ID.",
-//         name: 'id'
-//     },
-//     {
-//         type: 'input',
-//         message: "Please enter the intern's email address.",
-//         name: 'email'
-//     },
-//     {
-//         type: 'input',
-//         message: "Please enter the intern's school.",
-//         name: 'school'
-//     },
-//     {
-//         type: 'list',
-//         message: 'Would you like to add another team member?',
-//         name: 'addEmployee',
-//         choices: [
-//           'Add Intern',
-//           'Add Engineer',
-//           'Nope. All Done.'
-//         ]
-//     }
-// ];
 
 module.exports = questions;
