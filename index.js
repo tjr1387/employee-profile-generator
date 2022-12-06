@@ -23,13 +23,29 @@ function writeToFile(fileName, data) {
     );
 }
 
+function createInstances(inqResult) {
+    const result = [new Manager(inqResult.name, inqResult.id, inqResult.email, inqResult.officeNum)];
+    if (inqResult.addEmployee.length > 0) {
+        for (const employee of inqResult.addEmployee) {
+            if (employee.role === 'Engineer') {
+                result.push(new Engineer(employee.name, employee.id, employee.email, employee.gitHub));
+            } else {
+                result.push(new Intern(employee.name, employee.id, employee.email, employee.school));
+            }
+        }
+    }
+    return result;
+}
+
 // Function which will run inquirer -- some trickery involved with the potential loop here
 function init() {
     inquirer
         .prompt(questions)
         .then((response) => {
-            console.log(response);
+            const madeHtml = generateHtml(createInstances(response));
+            writeToFile('./dist/employees.html', madeHtml);
         });
 }
 
 init();
+
