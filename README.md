@@ -11,7 +11,6 @@ Using NodeJS and its 'Inquirer' package (plus the 'inquirer-loop' supplement), t
 - [Usage](#usage)
 - [Credits](#credits)
 - [Tests](#tests)
-- [Comments/Flaws](#comments/flaws)
 - [License](#license)
 
 ## Installation
@@ -34,7 +33,7 @@ GitHub user 'andreasonny83' for a nice boilerplate '.gitignore' file, and 'inqui
 
 ## Tests
 
-All OOP Classes have their own test suite. All the method are simple 'get' methods, so they aren't very complicated
+All OOP Classes have their own test suite. All the methods are simple 'get' methods, so they aren't very complicated.
 
 ## Comments/Flaws
 
